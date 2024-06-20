@@ -15,14 +15,16 @@ class _AppState extends State<App> {
   int counter = 0;
 
   void onClicked() {
-    counter = counter + 1;
+    setState(() {
+      counter = counter + 1;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0x0ff4eddb),
+        backgroundColor: const Color(0xFFF4EDDB),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
